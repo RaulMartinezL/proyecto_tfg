@@ -1,14 +1,18 @@
 pipeline {
     agent any 
     stages {
-        stage('Stage 1') {
+        stage('Build') {
             steps {
-                echo 'funcionas' 
+                sh  '''#!bin/bash
+                    pip install -r /config/backend/requirements.txt
+                    
+                    pip install pytest-django
+                    '''
             }
         }
-        stage('prueba') {
+        stage('Tests') {
             steps {
-                sh 'pytest --continue-on-collection-errors backend/post/tests.py'
+                sh 'pytest'
             }
         }
     }
