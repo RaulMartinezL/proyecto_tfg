@@ -8,7 +8,7 @@ pipeline {
         }
         stage('prueba') {
             steps {
-                sh 'pytests --continue-on-collection-errors backend/post/tests.py'
+                sh 'pytest --continue-on-collection-errors backend/post/tests.py'
             }
         }
     }
