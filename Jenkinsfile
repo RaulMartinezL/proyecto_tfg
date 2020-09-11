@@ -8,9 +8,7 @@ pipeline {
         }
         stage('prueba') {
             steps {
-                sh '''#!bin/bash
-                    pytests --continue-on-collection-errors backend/manage.py backend/post/tests.py
-                    '''
+                sh 'pytests --continue-on-collection-errors backend/post/tests.py'
             }
         }
     }
