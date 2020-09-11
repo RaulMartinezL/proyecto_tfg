@@ -3,11 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh  '''#!bin/bash
-                    pip install -r /config/backend/requirements.txt
-                    
-                    pip install pytest-django
-                    '''
+                sh  'pip install -r /config/backend/requirements.txt'
             }
         }
         stage('Tests') {
