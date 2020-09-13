@@ -1,9 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'python:3' }
+    }
     stages {
         stage('Build') {
             steps {
-                withEnv(["HOME=${env.WORKSPACE}"]) {
                 sh  'pip install -r /config/backend/requirements.txt'
                 }
             }
