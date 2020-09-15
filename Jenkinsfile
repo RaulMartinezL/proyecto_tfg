@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh  'pip install -r /config/backend/requirements.txt'
+                sh  'pip3 install -r /config/backend/requirements.txt'
             }
         }
         stage('Tests') {
