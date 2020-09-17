@@ -12,7 +12,7 @@ pipeline {
         stage('Tests') {
             steps {
                 echo 'Testing...'
-                sh 'pytest /backend/post/tests.py'
+                sh '/backend/manage.py test'
             }
         }
         stage('Deploy') {
