@@ -1,2 +1,2 @@
 # proyecto_tfg
-Repositorio para el desarrollo del
+Repositorio para el desarrollo del tfg
