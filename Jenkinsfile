@@ -7,7 +7,7 @@ pipeline {
             steps {
                 echo 'Building...'
                 sh 'ls'
-                sh 'which python'
+                sh 'python -V'
                 sh 'chmod -R 755 .'
                 sh  'pip3 install -r config/backend/requirements.txt'
             }
