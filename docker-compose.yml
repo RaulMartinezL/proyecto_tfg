@@ -1,9 +1,8 @@
 version: '3.7'
 services:
   nginx:
-    restart: always
     image: nginx:1.17
-    container_name: nginx
+    container_name: nginx_web
     ports:
       - "80:8000"
     volumes:
@@ -13,11 +12,10 @@ services:
     depends_on:
       - backend
   backend:
-    restart: always
     build:
       context: .
       dockerfile: ./config/backend/Dockerfile
-    container_name: backend
+    container_name: backend_web
     working_dir: /app/
     entrypoint:
       - /entrypoint.sh
@@ -32,11 +30,10 @@ services:
     expose:
       - "8000"
   frontend:
-    restart: always
     build:
       context: .
       dockerfile: ./config/frontend/Dockerfile
-    container_name: frontend
+    container_name: frontend_web
     working_dir: /app/
     entrypoint:
       - /entrypoint.sh
@@ -50,6 +47,22 @@ services:
       - ./static:/static
     environment:
       - NODE_ENV=development
+  jenkins:
+    container_name: jenkins_tfg
+    user: root
+    environment:
+      - DJANGO_SETTINGS_MODULE=taller_docker.settings.dev
+    build:
+      context: .
+      dockerfile: ./config/jenkins/Dockerfile
+    restart: always
+    ports:
+      - "8081:8080"
+      - "50001:50000"
+    volumes:
+      - ./src:/src
+      - ./jenkins_home:/var/jenkins_home
   redis:
     image: redis:6.0-rc
-
+    
+ 
