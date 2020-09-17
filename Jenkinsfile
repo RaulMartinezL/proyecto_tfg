@@ -11,7 +11,7 @@ pipeline {
         stage('Tests') {
             steps {
                 echo 'Testing...'
-                sh 'python /backend/manage.py test'
+                sh 'python ./backend/manage.py test'
             }
         }
         stage('Deploy') {
