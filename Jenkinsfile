@@ -6,6 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
+                sh 'ls'
                 sh  'pip3 install -r /config/backend/requirements.txt'
             }
         }
