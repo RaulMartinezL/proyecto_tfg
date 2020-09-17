@@ -7,7 +7,8 @@ pipeline {
             steps {
                 echo 'Building...'
                 sh 'ls'
-                sh  'pip3 install -r /config/backend/requirements.txt'
+                sh 'config/'
+                sh  'pip3 install -r config/backend/requirements.txt'
             }
         }
         stage('Tests') {
