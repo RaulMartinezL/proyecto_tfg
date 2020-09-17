@@ -6,7 +6,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'pip3 install pytest'
             }
         }
         stage('Tests') {
