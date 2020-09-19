@@ -21,10 +21,10 @@ pipeline {
             steps {
                 echo 'Deploying...'
                 
-                sh 'docker-compose down -v /var/run/docker.sock:/var/run/docker.sock'
-                sh 'docker stop $(docker ps -a -q) -v /var/run/docker.sock:/var/run/docker.sock'
-                sh 'docker-compose build -v /var/run/docker.sock:/var/run/docker.sock' 
-                sh 'docker-compose up -v /var/run/docker.sock:/var/run/docker.sock'
+                sh 'docker-compose -v /var/run/docker.sock:/var/run/docker.sock down' 
+                sh 'docker -v /var/run/docker.sock:/var/run/docker.sock stop $(docker ps -a -q) '
+                sh 'docker-compose -v /var/run/docker.sock:/var/run/docker.sock build ' 
+                sh 'docker-compose -v /var/run/docker.sock:/var/run/docker.sock up '
             }
         }
     }
