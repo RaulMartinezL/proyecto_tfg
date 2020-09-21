@@ -21,10 +21,10 @@ pipeline {
             steps {
                 echo 'Deploying...'
                 
-                /*sh 'docker-compose down' 
+                sh 'docker-compose down' 
                 sh 'docker stop $(docker ps -a -q) '
                 sh 'docker-compose build ' 
-                sh 'docker-compose up '*/
+                sh 'docker-compose up '
             }
         }
     }
