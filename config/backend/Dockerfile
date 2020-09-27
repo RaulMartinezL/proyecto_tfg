@@ -5,3 +5,7 @@ COPY ./config/backend/entrypoint.sh .
 COPY ./config/backend/requirements.txt .
 RUN pip3 install --upgrade pip -r requirements.txt
 
+
+
+
+ADD backend/ /app
