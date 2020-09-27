@@ -25,7 +25,6 @@ services:
       - ./static:/app/static
       - ./static:/static
       - ./front:/app/front
-      - wokspace:/var/jenkins_home/workspace/
     environment:
       - DJANGO_SETTINGS_MODULE=django_redes_sociales.settings
     expose:
@@ -46,7 +45,6 @@ services:
       - ./front:/app
       - ./media:/media
       - ./static:/static
-      - wokspace:/var/jenkins_home/workspace/
     environment:
       - NODE_ENV=development
   redis:
