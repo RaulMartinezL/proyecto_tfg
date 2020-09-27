@@ -21,10 +21,6 @@ services:
       - /entrypoint.sh
     volumes:
       - workspace:/app
-      - workspace:/media/app/media
-      - workspace:/static/app/static
-      - workspace:/static/static
-      - workspace:/front/app/front
     environment:
       - DJANGO_SETTINGS_MODULE=django_redes_sociales.settings
     expose:
