@@ -21,6 +21,8 @@ pipeline {
             steps {
                 echo 'Deploying...'
                 
+                
+                sh 'chmod -R 755 .'
                 // sh 'docker-compose down' 
                 // sh 'docker stop $(docker ps -a -q) '
                 // sh 'docker stop nginx_web'
