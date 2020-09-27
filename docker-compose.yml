@@ -51,14 +51,13 @@ services:
     image: redis:6.0-rc
     
 
-  volumes:
-    workspace:
-      driver: local
-      driver_opts:
-        type: none
-        o: bind
-        device: /var/jenkins_home/workspace/
-  
+volumes:
+  workspace:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /var/jenkins_home/workspace/
   
     
  
