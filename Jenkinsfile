@@ -23,9 +23,9 @@ pipeline {
                 
                 // sh 'docker-compose down' 
                 // sh 'docker stop $(docker ps -a -q) '
-                sh 'docker stop nginx_web'
-                sh 'docker stop backend_web'
-                sh 'docker stop frontend_web'
+                // sh 'docker stop nginx_web'
+                // sh 'docker stop backend_web'
+                // sh 'docker stop frontend_web'
                 sh 'docker-compose build ' 
                 sh 'docker-compose up '
             }
