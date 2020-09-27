@@ -4,7 +4,7 @@ services:
     image: nginx:1.17
     container_name: nginx_web
     ports:
-      - "80:8000"
+      - "82:8000"
     volumes:
       - ./config/nginx:/etc/nginx/conf.d
       - ./media:/usr/share/nginx/html/media/
