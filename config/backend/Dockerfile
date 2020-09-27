@@ -8,5 +8,4 @@ RUN pip3 install --upgrade pip -r requirements.txt
 
 
 
-COPY backend/* /app
-
+COPY backend/* app/
