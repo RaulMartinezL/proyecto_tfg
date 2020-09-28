@@ -21,14 +21,13 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                // sleep time: 9999, unit: 'MILLISECONDS'
                 
                 
                 // sh 'chmod -R 755 .'
-                // sh 'docker-compose down' 
-                // sh 'docker stop $(docker ps -a -q) '
-                // sh 'docker rm $(docker ps -a -q) '
-                // sh 'COMPOSE_HTTP_TIMEOUT=500 docker-compose build ' 
+                sh 'docker-compose down' 
+                sh 'docker rm -f $(docker ps -a -q)'
+                sh 'ddocker volume rm $(docker volume ls -q)'
+                sh 'docker-compose build ' 
                 sh 'docker-compose up -d'
             }
         }
