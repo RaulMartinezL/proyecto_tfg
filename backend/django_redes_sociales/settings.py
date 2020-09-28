@@ -30,7 +30,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'redes_sociales',
+    'django_redes_sociales',
     'channels',
     'django.contrib.admin',
     'django.contrib.auth',
