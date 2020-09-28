@@ -18,10 +18,7 @@ class BasicTest(TestCase):
         "Basic2 with setup"
         assert self.a != 2
 
-    def test_fail(self):
-        "This test should fail"
-        assert self.a == 2
-
+   
 
 
 
