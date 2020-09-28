@@ -13,6 +13,7 @@ pipeline {
         stage('Tests') {
             steps {
                 echo 'Testing...'
+                sleep time: 2500, unit: 'MILLISECONDS'
                 
                 // sh 'python3 backend/manage.py test'
             }
@@ -20,6 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
+                leep time: 10000, unit: 'MILLISECONDS'
                 
                 
                 sh 'chmod -R 755 .'
@@ -28,8 +30,8 @@ pipeline {
                 // sh 'docker stop nginx_web'
                 // sh 'docker stop backend_web'
                 // sh 'docker stop frontend_web'
-                sh 'docker-compose build ' 
-                sh 'docker-compose up '
+                // sh 'docker-compose build ' 
+                // sh 'docker-compose up '
             }
         }
     }
