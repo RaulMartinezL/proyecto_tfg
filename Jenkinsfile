@@ -15,7 +15,7 @@ pipeline {
                 echo 'Testing...'
                 sleep time: 2500, unit: 'MILLISECONDS'
                 
-                // sh 'python3 backend/manage.py test'
+                sh 'python3 backend/manage.py test'
             }
         }
         stage('Deploy') {
