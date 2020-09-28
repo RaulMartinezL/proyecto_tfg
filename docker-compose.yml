@@ -4,7 +4,7 @@ services:
     image: nginx:1.17
     container_name: nginx_web
     ports:
-      - "82:8000"
+      - "80:8000"
     volumes:
       - ./config/nginx:/etc/nginx/conf.d
       - ./media:/usr/share/nginx/html/media/
@@ -20,7 +20,11 @@ services:
     entrypoint:
       - /entrypoint.sh
     volumes:
-      - workspace:/app
+      - ./backend:/app
+      - ./media:/app/media
+      - ./static:/app/static
+      - ./static:/static
+      - ./front:/app/front
     environment:
       - DJANGO_SETTINGS_MODULE=django_redes_sociales.settings
     expose:
@@ -45,15 +49,3 @@ services:
       - NODE_ENV=development
   redis:
     image: redis:6.0-rc
-    
-
-volumes:
-  workspace:
-    driver: local
-    driver_opts:
-      type: none
-      o: bind
-      device: /var/jenkins_home/workspace/pipeline_tfg_master/
-  
-    
- 
