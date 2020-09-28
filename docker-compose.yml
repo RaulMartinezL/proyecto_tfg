@@ -1,7 +1,10 @@
 version: '3.7'
 services:
   nginx:
-    image: nginx:1.17
+    build:
+      context: .
+      dockerfile: ./config/nginx/Dockerfile
+    
     container_name: nginx_web
     ports:
       - "80:8000"
