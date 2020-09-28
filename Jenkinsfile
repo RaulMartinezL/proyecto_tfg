@@ -15,7 +15,7 @@ pipeline {
                 echo 'Testing...'
                 
                 
-                // sh 'python3 backend/manage.py test'
+                sh 'python3 backend/manage.py test'
             }
         }
         stage('Deploy') {
@@ -24,9 +24,9 @@ pipeline {
                 
                 
                 // sh 'chmod -R 755 .'
-                sh 'docker-compose down' 
-                sh 'docker-compose build' 
-                sh 'docker-compose up -d'
+                //sh 'docker-compose down' 
+                //sh 'docker-compose build' 
+                //sh 'docker-compose up -d'
             }
         }
     }
