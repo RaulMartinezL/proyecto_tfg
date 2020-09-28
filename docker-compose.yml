@@ -8,6 +8,8 @@ services:
     container_name: nginx_web
     ports:
       - "80:8000"
+    volumes:
+      - ./static:/static
     depends_on:
       - backend
   backend:
@@ -18,6 +20,9 @@ services:
     working_dir: /app/
     entrypoint:
       - /entrypoint.sh
+    volumes:
+      - ./static:/static
+      - ./static:/app/static
     environment:
       - DJANGO_SETTINGS_MODULE=django_redes_sociales.settings
     expose:
