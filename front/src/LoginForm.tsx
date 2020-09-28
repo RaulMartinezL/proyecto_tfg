@@ -71,7 +71,7 @@ render() {
             <div className="login-box-background">
                 
                 <div className="login-box">
-                    <h1 className="login-title">Log INdsadasd</h1>
+                    <h1 className="login-title">LogIN from GitHub</h1>
                     <form method="post" onSubmit={event => {this.onSubmit(event)}}>
 
                         <div className="login-textbox">
