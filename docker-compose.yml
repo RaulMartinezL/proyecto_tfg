@@ -19,9 +19,6 @@ services:
     working_dir: /app/
     entrypoint:
       - /entrypoint.sh
-    volumes:
-      - /var/lib/jenkins_home/workspace/pipeline_tfg_master/backend:/app
-
     environment:
       - DJANGO_SETTINGS_MODULE=django_redes_sociales.settings
     expose:
