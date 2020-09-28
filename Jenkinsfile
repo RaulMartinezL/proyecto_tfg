@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                sleep time: 9999, unit: 'MILLISECONDS'
+                // sleep time: 9999, unit: 'MILLISECONDS'
                 
                 
                 sh 'chmod -R 755 .'
