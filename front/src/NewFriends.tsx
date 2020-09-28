@@ -54,7 +54,8 @@ export class NewFriends extends Component {
                 }
                 else{
                     let image_url: string = val['profile']['image'];
-                    val['profile']['image'] = image_url.replace(hostname, "127.0.0.1");
+                    // val['profile']['image'] = image_url.replace(hostname, "127.0.0.1");
+                     val['profile']['image'] = '';
                     if (val['profile']['music'] === this.state['user_information']['music']){
                         pleasures_match++;
                     }
