@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                leep time: 10000, unit: 'MILLISECONDS'
+                leep time: 9999, unit: 'MILLISECONDS'
                 
                 
                 sh 'chmod -R 755 .'
