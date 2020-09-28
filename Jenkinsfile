@@ -26,8 +26,8 @@ pipeline {
                 
                 sh 'chmod -R 755 .'
                 // sh 'docker-compose down' 
-                sh 'docker stop $(docker ps -a -q) '
-                sh 'docker rm $(docker ps -a -q) '
+                // sh 'docker stop $(docker ps -a -q) '
+                // sh 'docker rm $(docker ps -a -q) '
                 sh 'docker-compose build ' 
                 sh 'docker-compose up '
             }
