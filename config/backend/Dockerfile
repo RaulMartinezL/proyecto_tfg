@@ -7,3 +7,7 @@ RUN pip3 install --upgrade pip -r requirements.txt
 
 
 ADD ./backend/ app/
+ADD ./media/ app/media
+ADD ./static/ app/static
+ADD ./static/ static/
+ADD ./front/ app/front
