@@ -28,7 +28,7 @@ pipeline {
                 // sh 'docker-compose down' 
                 // sh 'docker stop $(docker ps -a -q) '
                 // sh 'docker rm $(docker ps -a -q) '
-                sh 'docker-compose build ' 
+                sh 'COMPOSE_HTTP_TIMEOUT=500 docker-compose build ' 
                 sh 'docker-compose up '
             }
         }
