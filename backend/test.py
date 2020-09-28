@@ -1,7 +1,7 @@
 from django.test import TestCase
 
-from backend.models import Profile
-from backend.models import Message
+from .models import Profile
+from .models import Message
 
 class BasicTest(TestCase):
 
