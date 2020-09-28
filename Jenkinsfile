@@ -24,12 +24,12 @@ pipeline {
                 // sleep time: 9999, unit: 'MILLISECONDS'
                 
                 
-                sh 'chmod -R 755 .'
+                // sh 'chmod -R 755 .'
                 // sh 'docker-compose down' 
                 // sh 'docker stop $(docker ps -a -q) '
                 // sh 'docker rm $(docker ps -a -q) '
                 // sh 'COMPOSE_HTTP_TIMEOUT=500 docker-compose build ' 
-                sh 'docker-compose up '
+                sh 'docker-compose up -d'
             }
         }
     }
