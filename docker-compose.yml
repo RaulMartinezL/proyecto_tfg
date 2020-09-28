@@ -20,11 +20,8 @@ services:
     entrypoint:
       - /entrypoint.sh
     volumes:
-      - ./backend:/app
-      - ./media:/app/media
-      - ./static:/app/static
-      - ./static:/static
-      - ./front:/app/front
+      - /var/jenkins_home/workspace/pipeline_tfg_master/backend:/app
+
     environment:
       - DJANGO_SETTINGS_MODULE=django_redes_sociales.settings
     expose:
