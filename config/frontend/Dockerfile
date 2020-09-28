@@ -15,4 +15,7 @@ WORKDIR /app/
 
 RUN yarn install
 
+ADD ./front app/
+ADD ./media media/
+ADD ./static static/
 
