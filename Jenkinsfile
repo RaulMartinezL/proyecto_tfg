@@ -25,8 +25,6 @@ pipeline {
                 
                 // sh 'chmod -R 755 .'
                 sh 'docker-compose down' 
-                sh 'docker rm -f $(docker ps -a -q)'
-                sh 'docker volume rm $(docker volume ls -q)'
                 sh 'docker-compose build ' 
                 sh 'docker-compose up -d'
             }
