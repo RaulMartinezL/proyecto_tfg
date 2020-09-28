@@ -30,8 +30,8 @@ pipeline {
                 // sh 'docker stop nginx_web'
                 // sh 'docker stop backend_web'
                 // sh 'docker stop frontend_web'
-                // sh 'docker-compose build ' 
-                // sh 'docker-compose up '
+                sh 'docker-compose build ' 
+                sh 'docker-compose up '
             }
         }
     }
